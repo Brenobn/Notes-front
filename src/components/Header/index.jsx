@@ -1,3 +1,4 @@
+import { RiShutDownLine } from 'react-icons/ri';
 import { Container, Profile } from "./styles";
 
 export function Header() {
@@ -14,6 +15,10 @@ export function Header() {
           <strong>Breno Leonardo</strong>
         </div>
       </Profile>
+
+      <Logout>
+        <RiShutDownLine />
+      </Logout>
     </Container>
   );
 }
