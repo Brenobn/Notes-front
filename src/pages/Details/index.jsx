@@ -8,7 +8,7 @@ export function Details() {
     <Container>
       <Header />
       
-      <Button title="Voltar" />
+      <Button title="Voltar"  />
     </Container>
   );
 }
