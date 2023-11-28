@@ -1,8 +1,29 @@
-# React + Vite
+📃 Sobre
+Este repositório contém um aplicativo feito em React e Vite utilizando JavaScript.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Essa é a aplicação Notesfront, na tela Home, o usuário tem acesso a todos as anotações, sendo possível adicioanr quantas quiser a lista de links e tags. Na tela Details, o usuário tem acesso a todos os detalhes adicionados a cada nota, bem como a funcionalidade de adicionar ou remover uma nota específica.
 
-Currently, two official plugins are available:
+🔨 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React
+Vite
+JavaScript
+React-router-dom
+Axios
+Styled Components
+JSON Server
+React-icons
+
+📚 Requisitos
+Ter Git para clonar o projeto.
+Ter Node.js instalado.
+
+🚀 Começando
+  # Clonar o projeto:
+  $ git clone https://github.com/Brenobn/Notes-front
+
+  # Entrar no diretório:
+  $ cd Notes-front
+
+  Feito com ❤️ por Breno Leonardo 👋🏻
