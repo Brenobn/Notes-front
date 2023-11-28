@@ -6,18 +6,18 @@ Essa é a aplicação Notesfront, foi desenvolvida para fazer anotações de lin
 🔨 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-React
-Vite
-JavaScript
-React-router-dom
-Axios
-Styled Components
-JSON Server
-React-icons
+- React
+- Vite
+- JavaScript
+- React-router-dom
+- Axios
+- Styled Components
+- JSON Server
+- React-icons
 
 📚 Requisitos
-Ter Git para clonar o projeto.
-Ter Node.js instalado.
+- Ter Git para clonar o projeto.
+- Ter Node.js instalado.
 
 🚀 Começando
   # Clonar o projeto:
