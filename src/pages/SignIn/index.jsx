@@ -1,12 +1,17 @@
 import { FiMail, FiLock } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
+import { useAuth } from '../../hooks/auth';
+
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
 import { Container, Form, Background } from "./styles";
 
 export function SignIn() {
+  
+  const data = useAuth();
+
   return(
     <Container>
       <Form>
