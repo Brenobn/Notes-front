@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 import { api } from "../services/api";
 
@@ -27,6 +27,20 @@ function AuthProvider({ children }) {
       }
     }
   }
+
+  useEffect(() => {
+    const token = localStorage.getItem("@notes-front:token");
+    const user = localStorage.getItem("@notes-front:user");
+
+    if(token && user) {
+      api.defaults.headers.authorization = `Bearer ${token}`;
+
+      setData({
+        token,
+        user: JSON.parse(user)
+      });
+    }
+  }, []);
    
   return(
     <AuthContext.Provider value={{ signIn, user: data.user }} >
