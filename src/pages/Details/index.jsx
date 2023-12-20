@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Container, Links, Content } from "./styles";
 import { useParams } from "react-router-dom";
 
+import { api } from "../../services/api";
+
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { Section } from "../../components/Section";
