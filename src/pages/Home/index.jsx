@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiPlus, FiSearch } from 'react-icons/fi';
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
 
@@ -11,6 +11,14 @@ import { ButtonText } from '../../components/ButtonText';
 export function Home() {
   const [tags, setTags] = useState([]);
 
+  useEffect(() => {
+    async function fetchTags() {
+
+    }
+
+    fetchTags();
+  },[])
+ 
   return(
     <Container>
       <Brand>
