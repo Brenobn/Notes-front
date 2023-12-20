@@ -38,13 +38,22 @@ export function New() {
           />
 
           <Section title="Links úteis">
+            {
+              links.map((link, index) => (
+                <NoteItem 
+                  key={String(index)}
+                  value={link}
+                  onClick={() => { }}
+                />
+              ))
+            }
             <NoteItem 
-              isNew 
-              placeholder="Novo link" 
-              value={newLink}
-              onChange={e => setNewLink(e.target.value)}
-              onClick={handleAddLink}
-            />
+                  isNew 
+                  placeholder="Novo link" 
+                  value={newLink}
+                  onChange={e => setNewLink(e.target.value)}
+                  onClick={handleAddLink}
+                />
           </Section>
 
           <Section title="Marcadores" >
