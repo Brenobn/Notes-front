@@ -15,12 +15,12 @@ export function Header() {
       <Profile to="/profile">
         <img 
           src={avatarUrl} 
-          alt="Foto de perfil do github" 
+          alt={user.name} 
         />
 
         <div>
           <span>Bem-vindo</span>
-          <strong>Breno Leonardo</strong>
+          <strong>{user.name}</strong>
         </div>
       </Profile>
 
