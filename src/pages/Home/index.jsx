@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { FiPlus, FiSearch } from 'react-icons/fi';
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
 
+import { api } from '../../services/api';
+
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { Section } from '../../components/Section';
@@ -13,7 +15,8 @@ export function Home() {
 
   useEffect(() => {
     async function fetchTags() {
-
+      const response = await api.get("/tags");
+      setTags(response.data);
     }
 
     fetchTags();
