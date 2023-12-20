@@ -1,4 +1,5 @@
 import { Container, Links, Content } from "./styles";
+import { useParams } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
@@ -7,6 +8,9 @@ import { Tag } from "../../components/Tag";
 import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
+  
+  const params = useParams();
+
   return(
     <Container>
       <Header />
