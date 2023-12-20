@@ -8,9 +8,14 @@ import { NoteItem } from '../../components/NoteItem';
 import { Section } from '../../components/Section';
 import { Button } from '../../components/Button';
 
+import { api } from '../../services/api';
+
 import { Container, Form } from './styles';
 
 export function New() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
   const [links, setLinks] = useState([]);
   const [newLink, setNewLink] = useState("");
 
@@ -35,6 +40,15 @@ export function New() {
     setTags(prevState => prevState.filter(tag => tag !== deleted));
   }
 
+  async function handleNewNote() {
+    await api.post("/notes", {
+      title,
+      description,
+      tags,
+      links
+    });
+  }
+
   return(
     <Container>
       <Header />
@@ -48,9 +62,11 @@ export function New() {
 
           <Input 
             placeholder="Título"
+            onChange={e => setTitle(e.target.value)}
           />
           <Textarea 
             placeholder="Observações"
+            onChange={e => setDescription(e.target.value)}
           />
 
           <Section title="Links úteis">
