@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Container, Links, Content } from "./styles";
 import { useParams } from "react-router-dom";
 
@@ -8,8 +9,18 @@ import { Tag } from "../../components/Tag";
 import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
+  const [data, setData] = useState(null);
   
   const params = useParams();
+
+  useEffect(() => {
+    async function fetchNote() {
+      const response = await api.get(`/notes/${params.id}`);
+      setData(response.data);
+    }
+
+    fetchNote();
+  },[]);
 
   return(
     <Container>
